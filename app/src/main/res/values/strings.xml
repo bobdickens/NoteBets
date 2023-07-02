@@ -5,4 +5,10 @@
     <string name="title_notifications">Notifications</string>
     <string name="name">Name</string>
     <string name="date">Date</string>
+    <string name="bets_note">BETS NOTE</string>
+    <string name="status">STATUS</string>
+    <string name="win">WIN</string>
+    <string name="loos">LOOS</string>
+    <string name="hover">HOVER</string>
+    <string name="save">SAVE</string>
 </resources>
