@@ -7,8 +7,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.notebets.R
+import com.example.notebets.databinding.FragmentAddNewBinding
+import com.example.notebets.models.AppNote
+import com.example.notebets.utilits.APP_ACTIVITY
+import com.example.notebets.utilits.showToast
 
 class fragment_add_new : Fragment() {
+
+    lateinit var binding: FragmentAddNewBinding
 
     companion object {
         fun newInstance() = fragment_add_new()
@@ -19,14 +25,49 @@ class fragment_add_new : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_add_new, container, false)
+    ): View {
+        binding = FragmentAddNewBinding.inflate(layoutInflater, container, false)
+        return binding.root
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(FragmentAddNewViewModel::class.java)
         // TODO: Use the ViewModel
+    }
+
+    override fun onStart() {
+        super.onStart()
+        initialisation()
+    }
+
+    private fun initialisation() {
+        viewModel = ViewModelProvider(this).get(FragmentAddNewViewModel::class.java)
+        binding.btnAddNew.setOnClickListener {
+            val name = binding.etName.text.toString()
+            val date = binding.etDate.text.toString()
+            val amount = binding.etAmount.text.toString()
+            val score = binding.etScore.text.toString()
+            val odds = binding.etOdds.text.toString()
+            val descr = binding.etDescription.text.toString()
+            if (name.isEmpty()) {
+                showToast(getString(R.string.enter_name))
+            } else {
+
+                viewModel.insert(AppNote(name = name, date = date, amount = amount, score = score, odds = odds, status = 0, description = descr )){
+                    APP_ACTIVITY.navController.navigate(R.id.action_fragment_add_new_to_navigation_home)
+                }
+            }
+        }
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+//        binding.btnBack.setOnClickListener {
+//            APP_ACTIVITY.navController.navigate(R.id.action_fragment_add_new_to_navigation_home)
+//
+//        }
+
     }
 
 }

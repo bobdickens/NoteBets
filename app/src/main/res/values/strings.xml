@@ -11,4 +11,6 @@
     <string name="loos">LOOS</string>
     <string name="hover">HOVER</string>
     <string name="save">SAVE</string>
+    <string name="add_new_bet">ADD NEW BET</string>
+    <string name="enter_name">Enter Name</string>
 </resources>

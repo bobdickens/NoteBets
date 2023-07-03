@@ -10,6 +10,7 @@ import com.example.notebets.R
 import com.example.notebets.databinding.FragmentHomeBinding
 import com.example.notebets.utilits.APP_ACTIVITY
 import com.example.notebets.utilits.TYPE_ROOM
+import com.example.notebets.utilits.showToast
 
 class HomeFragment : Fragment() {
 
@@ -37,8 +38,15 @@ class HomeFragment : Fragment() {
     private fun initialization() {
         mViewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
         mViewModel.initDataBase(TYPE_ROOM){
+            showToast("Привет")
+        }
+
+        binding.btnAdd.setOnClickListener {
+            APP_ACTIVITY.navController.navigate(R.id.action_navigation_home_to_fragment_add_new)
         }
     }
+
+
 
     override fun onDestroyView() {
         super.onDestroyView()
