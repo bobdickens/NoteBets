@@ -7,6 +7,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.notebets.database.Room.AppRoomDatabase
 import com.example.notebets.database.Room.AppRoomRepository
+import com.example.notebets.models.AppNote
 import com.example.notebets.utilits.REPOSITORY
 import com.example.notebets.utilits.TYPE_ROOM
 
@@ -25,4 +26,7 @@ class HomeViewModel (application: Application): AndroidViewModel(application) {
         }
 
     }
+
+
+
 }

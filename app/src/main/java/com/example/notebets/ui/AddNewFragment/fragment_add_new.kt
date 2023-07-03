@@ -63,10 +63,10 @@ class fragment_add_new : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-//        binding.btnBack.setOnClickListener {
-//            APP_ACTIVITY.navController.navigate(R.id.action_fragment_add_new_to_navigation_home)
-//
-//        }
+        binding.btnBack.setOnClickListener {
+            APP_ACTIVITY.navController.navigate(R.id.action_fragment_add_new_to_navigation_home)
+
+        }
 
     }
 
