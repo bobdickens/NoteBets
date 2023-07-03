@@ -6,7 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.example.notebets.R
 import com.example.notebets.databinding.FragmentHomeBinding
+import com.example.notebets.utilits.APP_ACTIVITY
 import com.example.notebets.utilits.TYPE_ROOM
 
 class HomeFragment : Fragment() {
@@ -34,7 +36,8 @@ class HomeFragment : Fragment() {
 
     private fun initialization() {
         mViewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
-        mViewModel.initDataBase(TYPE_ROOM)
+        mViewModel.initDataBase(TYPE_ROOM){
+        }
     }
 
     override fun onDestroyView() {
