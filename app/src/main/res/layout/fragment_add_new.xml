@@ -45,7 +45,7 @@
         android:textColor="@color/color_text"
         android:textColorHint="@color/color_line"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/et_date"
@@ -110,7 +110,7 @@
         app:layout_constraintTop_toBottomOf="@+id/et_odds" />
 
     <RadioGroup
-        android:id="@+id/radio"
+        android:id="@+id/radioWinLos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -119,16 +119,13 @@
         app:layout_constraintTop_toBottomOf="@+id/textView5">
 
         <RadioButton
+            android:id="@+id/radioloose"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="25dp" />
 
         <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="25dp" />
-
-        <RadioButton
+            android:id="@+id/radiowin"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
 
@@ -142,8 +139,8 @@
         android:textColor="@color/color_text"
         android:textSize="15dp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/radio"
-        app:layout_constraintTop_toBottomOf="@+id/radio" />
+        app:layout_constraintEnd_toEndOf="@+id/radioWinLos"
+        app:layout_constraintTop_toBottomOf="@+id/radioWinLos" />
 
     <TextView
         android:id="@+id/textView6"
@@ -153,20 +150,8 @@
         android:textColor="@color/color_text"
         android:textSize="15dp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/radio"
-        app:layout_constraintTop_toBottomOf="@+id/radio" />
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="HOVER"
-        android:textColor="@color/color_text"
-        android:textSize="15dp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/radio"
-        app:layout_constraintStart_toStartOf="@+id/radio"
-        app:layout_constraintTop_toBottomOf="@+id/radio" />
+        app:layout_constraintStart_toStartOf="@+id/radioWinLos"
+        app:layout_constraintTop_toBottomOf="@+id/radioWinLos" />
 
     <Button
         android:id="@+id/btn_add_new"

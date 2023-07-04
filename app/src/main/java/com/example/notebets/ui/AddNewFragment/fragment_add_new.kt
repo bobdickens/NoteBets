@@ -30,35 +30,21 @@ class fragment_add_new : Fragment() {
         return binding.root
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(FragmentAddNewViewModel::class.java)
-        // TODO: Use the ViewModel
-    }
+
 
     override fun onStart() {
         super.onStart()
+
         initialisation()
+
     }
+
+
 
     private fun initialisation() {
         viewModel = ViewModelProvider(this).get(FragmentAddNewViewModel::class.java)
-        binding.btnAddNew.setOnClickListener {
-            val name = binding.etName.text.toString()
-            val date = binding.etDate.text.toString()
-            val amount = binding.etAmount.text.toString()
-            val score = binding.etScore.text.toString()
-            val odds = binding.etOdds.text.toString()
-            val descr = binding.etDescription.text.toString()
-            if (name.isEmpty()) {
-                showToast(getString(R.string.enter_name))
-            } else {
 
-                viewModel.insert(AppNote(name = name, date = date, amount = amount, score = score, odds = odds, status = 0, description = descr )){
-                    APP_ACTIVITY.navController.navigate(R.id.action_fragment_add_new_to_navigation_home)
-                }
-            }
-        }
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -67,6 +53,32 @@ class fragment_add_new : Fragment() {
             APP_ACTIVITY.navController.navigate(R.id.action_fragment_add_new_to_navigation_home)
 
         }
+
+
+
+
+        binding.btnAddNew.setOnClickListener {
+            val name = binding.etName.text.toString()
+            val date = binding.etDate.text.toString()
+            val amount = binding.etAmount.text.toString()
+            val score = binding.etScore.text.toString()
+            val odds = binding.etOdds.text.toString()
+            val descr = binding.etDescription.text.toString()
+            val status = if (binding.radioWinLos.checkedRadioButtonId == R.id.radioloose) {"LOOSE"} else {"WIN"}
+
+
+
+
+            if (name.isEmpty()) {
+                showToast(getString(R.string.enter_name))
+            } else {
+
+                viewModel.insert(AppNote(name = name, date = date, amount = amount, score = score, odds = odds, status = status, description = descr )){
+                    APP_ACTIVITY.navController.navigate(R.id.action_fragment_add_new_to_navigation_home)
+                }
+            }
+        }
+
 
     }
 

@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.notebets.R
 import com.example.notebets.databinding.NoteItemBinding
 import com.example.notebets.models.AppNote
+import com.example.notebets.ui.home.HomeFragment
 
 @Keep
 class MainAdapter:  ListAdapter<AppNote, MainAdapter.Holder>(Comparator()){
@@ -21,8 +22,26 @@ class MainAdapter:  ListAdapter<AppNote, MainAdapter.Holder>(Comparator()){
         fun bind (item: AppNote) = with(binding){
             //namePlayers.text = item.name
             tvItemName.text = item.name
+            tvItemDate.text = item.date
+            amountCurrent.text = item.amount
+            oddsCurrent.text = item.odds
+            scoreCurrent.text = item.score
+            statusCurrent.text = item.status
+
 
         }
+    }
+
+    override fun onViewAttachedToWindow(holder: Holder) {
+        super.onViewAttachedToWindow(holder)
+        holder.itemView.setOnClickListener {
+            HomeFragment.click(getItem(holder.adapterPosition))
+        }
+    }
+
+    override fun onViewDetachedFromWindow(holder: Holder) {
+        super.onViewDetachedFromWindow(holder)
+        holder.itemView.setOnClickListener(null)
     }
 
     class Comparator : DiffUtil.ItemCallback<AppNote>(){

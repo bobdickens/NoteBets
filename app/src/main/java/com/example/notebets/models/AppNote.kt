@@ -3,6 +3,7 @@ package com.example.notebets.models
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import java.io.Serializable
 
 @Entity(tableName = "notes_tables")
 data class AppNote (
@@ -13,7 +14,7 @@ data class AppNote (
         @ColumnInfo val amount: String = "",
         @ColumnInfo val odds: String = "",
         @ColumnInfo val score: String = "",
-        @ColumnInfo val status: Int = 0,
+        @ColumnInfo val status: String = "",
         @ColumnInfo val description: String = ""
 
-        )
+        ): Serializable

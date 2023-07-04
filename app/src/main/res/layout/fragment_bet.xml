@@ -1,11 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.Fragment_Bet.BetFragment"
-    android:background="@color/color_back">
+    android:background="@color/color_back"
+    tools:context=".ui.Fragment_Bet.BetFragment">
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/status"
+        android:textColor="@color/color_text"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <TextView
         android:id="@+id/text_view1"
@@ -21,32 +34,37 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
-    <androidx.appcompat.widget.AppCompatEditText
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/et_name"
+        android:textSize="25sp"
+        android:textStyle="bold"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="25dp"
         android:backgroundTint="@color/color_line"
         android:hint="@string/name"
-        android:textColor="@color/color_text"
+        android:textColor="@color/color_line"
         android:textColorHint="@color/color_line"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_view1" />
 
-    <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/et_description"
+    <androidx.appcompat.widget.AppCompatTextView
+        android:textSize="20sp"
+        android:id="@+id/tv_description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="25dp"
+        android:layout_marginStart="32dp"
         android:backgroundTint="@color/color_line"
         android:hint="Description"
         android:textColor="@color/color_text"
         android:textColorHint="@color/color_line"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_status" />
 
-    <androidx.appcompat.widget.AppCompatEditText
+    <androidx.appcompat.widget.AppCompatTextView
+        android:textSize="20sp"
         android:id="@+id/et_date"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
@@ -58,9 +76,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_name" />
 
-    <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/appCompatEditText2"
-        android:layout_width="150dp"
+    <androidx.appcompat.widget.AppCompatTextView
+        android:textSize="20sp"
+        android:id="@+id/tv_amount"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="25dp"
         android:backgroundTint="@color/color_line"
@@ -70,8 +89,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_name" />
 
-    <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/appCompatEditText3"
+    <androidx.appcompat.widget.AppCompatTextView
+        android:textSize="20sp"
+        android:id="@+id/tv_odds"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_margin="25dp"
@@ -82,16 +102,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_date" />
 
-    <androidx.appcompat.widget.AppCompatEditText
-        android:layout_width="150dp"
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_score"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="25dp"
+        android:layout_marginTop="25dp"
         android:backgroundTint="@color/color_line"
         android:hint="Score"
         android:textColor="@color/color_text"
         android:textColorHint="@color/color_line"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appCompatEditText2" />
+        app:layout_constraintEnd_toEndOf="@+id/tv_amount"
+        app:layout_constraintTop_toBottomOf="@+id/tv_amount" />
 
 
     <TextView
@@ -105,7 +127,8 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appCompatEditText3" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_odds" />
+
 
     <RadioGroup
         android:id="@+id/radio"
@@ -114,70 +137,7 @@
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5">
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="25dp" />
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="25dp" />
-
-        <RadioButton
-            android:layout_width="30dp"
-            android:layout_height="wrap_content"
-
-            />
-    </RadioGroup>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/win"
-        android:textColor="@color/color_text"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/radio"
-        app:layout_constraintTop_toBottomOf="@+id/radio" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/loos"
-        android:textColor="@color/color_text"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/radio"
-        app:layout_constraintTop_toBottomOf="@+id/radio" />
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hover"
-        android:textColor="@color/color_text"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/radio"
-        app:layout_constraintStart_toStartOf="@+id/radio"
-        app:layout_constraintTop_toBottomOf="@+id/radio" />
-
-    <Button
-        android:id="@+id/btn_save"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/color_front"
-        android:text="@string/save"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginBottom="50dp"/>
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
 
     <ImageButton

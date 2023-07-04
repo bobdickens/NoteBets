@@ -6,6 +6,7 @@ import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
+import androidx.room.Update
 import com.example.notebets.models.AppNote
 
 
@@ -16,6 +17,7 @@ interface AppRoomDao {
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insert(note: AppNote)
+
 
     @Delete
     suspend fun delete (note: AppNote)

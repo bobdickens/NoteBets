@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_navigation_home_to_fragment_add_new"
             app:destination="@id/fragment_add_new" />
+        <action
+            android:id="@+id/action_navigation_home_to_betFragment"
+            app:destination="@id/betFragment" />
     </fragment>
 
     <fragment
@@ -33,6 +36,15 @@
         tools:layout="@layout/fragment_add_new" >
         <action
             android:id="@+id/action_fragment_add_new_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/betFragment"
+        android:name="com.example.notebets.ui.Fragment_Bet.BetFragment"
+        android:label="fragment_bet"
+        tools:layout="@layout/fragment_bet" >
+        <action
+            android:id="@+id/action_betFragment_to_navigation_home"
             app:destination="@id/navigation_home" />
     </fragment>
 </navigation>

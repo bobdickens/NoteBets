@@ -64,7 +64,7 @@ class HomeFragment : Fragment() {
 
         mViewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
         mViewModel.initDataBase(TYPE_ROOM){
-            showToast("Room Initialization")
+            //showToast("Room Initialization")
         }
         binding.btnAdd.setOnClickListener {
             APP_ACTIVITY.navController.navigate(R.id.action_navigation_home_to_fragment_add_new)
@@ -83,5 +83,13 @@ class HomeFragment : Fragment() {
         _binding = null
         rViewModel.allNotes.removeObserver(mObserverList)
         mRecyclerView.adapter = null
+    }
+
+    companion object {
+        fun click (note: AppNote){
+            val bundle = Bundle()
+            bundle.putSerializable("note", note)
+            APP_ACTIVITY.navController.navigate(R.id.action_navigation_home_to_betFragment, bundle)
+        }
     }
 }
