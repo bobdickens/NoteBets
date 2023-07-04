@@ -48,6 +48,13 @@ class BetFragment : Fragment() {
         }
 
 
+        binding.btnDelete.setOnClickListener {
+            mViewModel.delete(mCurrentNote){
+                APP_ACTIVITY.navController.navigate(R.id.action_betFragment_to_navigation_home)
+            }
+        }
+
+
     }
 
 }
