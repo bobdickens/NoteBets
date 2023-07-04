@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.dashboard.typesOfBest.TypeFragment"
+    android:background="@color/color_back">
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:background="@color/color_back"
+        android:id="@+id/btn_back"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/baseline_arrow_back_ios_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+
+        android:id="@+id/imageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/startlogo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="TYPES OF BETS"
+        android:textColor="@color/color_text"
+        android:textSize="35sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_moneylines"
+        android:layout_width="180dp"
+        android:layout_height="74dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/color_front"
+        android:text="@string/moneylines"
+        android:textColor="@color/color_text"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:cornerRadius="35dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_total_rounds"
+        android:layout_width="180dp"
+        android:layout_height="74dp"
+        android:backgroundTint="@color/color_front"
+        android:text="@string/total_rounds"
+        android:textColor="@color/color_text"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:cornerRadius="35dp"
+        app:layout_constraintStart_toStartOf="@+id/btn_moneylines"
+        app:layout_constraintTop_toBottomOf="@+id/btn_moneylines" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_parlays"
+        android:layout_width="180dp"
+        android:layout_height="74dp"
+        android:backgroundTint="@color/color_front"
+        android:text="@string/parlays"
+        android:textColor="@color/color_text"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:cornerRadius="35dp"
+        app:layout_constraintStart_toStartOf="@+id/btn_total_rounds"
+        app:layout_constraintTop_toBottomOf="@+id/btn_total_rounds" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_prop_bets"
+        android:layout_width="180dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="@color/color_front"
+        android:text="@string/prop_bets"
+        android:textColor="@color/color_text"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:cornerRadius="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_over_under"
+        android:layout_width="180dp"
+        android:layout_height="74dp"
+        android:backgroundTint="@color/color_front"
+        android:text="@string/over_under"
+        android:textColor="@color/color_text"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:cornerRadius="35dp"
+        app:layout_constraintEnd_toEndOf="@+id/btn_teaser_bets"
+        app:layout_constraintTop_toBottomOf="@+id/btn_teaser_bets" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_betting_against_the_spread"
+        android:layout_width="180dp"
+        android:layout_height="74dp"
+        android:backgroundTint="@color/color_front"
+        android:text="@string/betting_against_the_spread"
+        android:textColor="@color/color_text"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:cornerRadius="35dp"
+        app:layout_constraintEnd_toEndOf="@+id/btn_prop_bets"
+        app:layout_constraintTop_toBottomOf="@+id/btn_prop_bets" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_futures"
+        android:layout_width="180dp"
+        android:layout_height="74dp"
+        android:backgroundTint="@color/color_front"
+        android:text="@string/futures"
+        android:textColor="@color/color_text"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:cornerRadius="35dp"
+        app:layout_constraintStart_toStartOf="@+id/btn_parlays"
+        app:layout_constraintTop_toBottomOf="@+id/btn_parlays" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_teaser_bets"
+        android:layout_width="180dp"
+        android:layout_height="74dp"
+        android:backgroundTint="@color/color_front"
+        android:text="@string/teaser_bets"
+        android:textColor="@color/color_text"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:cornerRadius="35dp"
+        app:layout_constraintEnd_toEndOf="@+id/btn_betting_against_the_spread"
+        app:layout_constraintTop_toBottomOf="@+id/btn_betting_against_the_spread" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

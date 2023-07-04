@@ -22,7 +22,11 @@
         android:id="@+id/navigation_dashboard"
         android:name="com.example.notebets.ui.dashboard.DashboardFragment"
         android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_navigation_dashboard_to_typeFragment"
+            app:destination="@id/typeFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_notifications"
@@ -47,4 +51,18 @@
             android:id="@+id/action_betFragment_to_navigation_home"
             app:destination="@id/navigation_home" />
     </fragment>
+    <fragment
+        android:id="@+id/typeFragment"
+        android:name="com.example.notebets.ui.dashboard.typesOfBest.TypeFragment"
+        android:label="fragment_type"
+        tools:layout="@layout/fragment_type" >
+        <action
+            android:id="@+id/action_typeFragment_to_navigation_dashboard"
+            app:destination="@id/navigation_dashboard" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.example.notebets.DetailsFragment"
+        android:label="fragment_details"
+        tools:layout="@layout/fragment_details" />
 </navigation>

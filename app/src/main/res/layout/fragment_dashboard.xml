@@ -4,19 +4,77 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.dashboard.DashboardFragment">
+    tools:context=".ui.dashboard.DashboardFragment"
+    android:background="@color/color_back">
 
-    <TextView
-        android:id="@+id/text_dashboard"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ImageView
+
+        android:id="@+id/imageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/startlogo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="INFO BETS"
+        android:textColor="@color/color_text"
+        android:textSize="35sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_types"
+        android:layout_width="204dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/color_front"
+        android:text="TYPE OF BETS"
+        android:textColor="@color/color_text"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:cornerRadius="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_strategy_bets"
+        android:layout_width="204dp"
+        android:layout_height="74dp"
+        android:backgroundTint="@color/color_front"
+        android:text="STRATEGY"
+        android:textColor="@color/color_text"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:cornerRadius="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_types" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_FAQ"
+        android:layout_width="204dp"
+        android:layout_height="74dp"
+        android:backgroundTint="@color/color_front"
+        android:text="FAQ"
+        android:textColor="@color/color_text"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:cornerRadius="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_strategy_bets" />
+
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
