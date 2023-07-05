@@ -7,7 +7,9 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.example.notebets.R
 import com.example.notebets.databinding.FragmentDashboardBinding
+import com.example.notebets.utilits.APP_ACTIVITY
 
 class DashboardFragment : Fragment() {
 
@@ -28,11 +30,22 @@ class DashboardFragment : Fragment() {
         _binding = FragmentDashboardBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-//        val textView: TextView = binding.textDashboard
-//        dashboardViewModel.text.observe(viewLifecycleOwner) {
-//            textView.text = it
-//        }
+
         return root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.btnTypes.setOnClickListener {
+            APP_ACTIVITY.navController.navigate(R.id.action_navigation_dashboard_to_typeFragment)
+        }
+        binding.btnStrategyBets.setOnClickListener {
+            APP_ACTIVITY.navController.navigate(R.id.action_navigation_dashboard_to_strategyFragment)
+        }
+        binding.btnFAQ.setOnClickListener {
+            APP_ACTIVITY.navController.navigate(R.id.action_navigation_dashboard_to_FAQFragment)
+        }
     }
 
     override fun onDestroyView() {

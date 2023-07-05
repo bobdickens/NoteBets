@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".StrategyFragment"
+    android:background="@color/color_back"
+    android:overScrollMode="never">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:overScrollMode="never"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/btn_back3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/color_back"
+                android:src="@drawable/baseline_arrow_back_ios_24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+
+                android:id="@+id/imageView"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/startlogo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:padding="10dp"
+                android:layout_margin="10dp"
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="STRATEGY OF BETS"
+                android:textColor="@color/color_text"
+                android:textSize="35sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintEnd_toEndOf="@+id/imageView"
+                app:layout_constraintStart_toStartOf="@+id/imageView"
+                app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/beat"
+                android:layout_width="350dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="@color/color_front"
+                android:text="@string/beat_the_bookies_with_the_overlyzer_live_tool"
+                android:textColor="@color/color_text"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:cornerRadius="35dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_1x"
+                android:layout_width="350dp"
+                android:layout_height="80dp"
+                android:backgroundTint="@color/color_front"
+                android:text="@string/_1x_on_home_outsiders_strategy"
+                android:textColor="@color/color_text"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:cornerRadius="35dp"
+                app:layout_constraintEnd_toEndOf="@+id/beat"
+                app:layout_constraintStart_toStartOf="@+id/beat"
+                app:layout_constraintTop_toBottomOf="@+id/beat" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_all_in"
+                android:layout_width="350dp"
+                android:layout_height="80dp"
+                android:backgroundTint="@color/color_front"
+                android:text="@string/all_in_on_odds_at_1_20_strategy"
+                android:textColor="@color/color_text"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:cornerRadius="35dp"
+                app:layout_constraintEnd_toEndOf="@+id/btn_1x"
+                app:layout_constraintStart_toStartOf="@+id/btn_1x"
+                app:layout_constraintTop_toBottomOf="@+id/btn_1x" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_1_2_3_system"
+                android:layout_width="350dp"
+                android:layout_height="80dp"
+                android:backgroundTint="@color/color_front"
+                android:text="@string/the_1_3_2_6_system"
+                android:textColor="@color/color_text"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:cornerRadius="35dp"
+                app:layout_constraintEnd_toEndOf="@+id/btn_all_in"
+                app:layout_constraintStart_toStartOf="@+id/btn_all_in"
+                app:layout_constraintTop_toBottomOf="@+id/btn_all_in" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_fibbonacci"
+                android:layout_width="350dp"
+                android:layout_height="80dp"
+                android:backgroundTint="@color/color_front"
+                android:text="@string/the_fibonacci_betting_system"
+                android:textColor="@color/color_text"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:cornerRadius="35dp"
+                app:layout_constraintEnd_toEndOf="@+id/btn_1_2_3_system"
+                app:layout_constraintStart_toStartOf="@+id/btn_1_2_3_system"
+                app:layout_constraintTop_toBottomOf="@+id/btn_1_2_3_system" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_kelly_formula"
+                android:layout_width="350dp"
+                android:layout_height="80dp"
+                android:backgroundTint="@color/color_front"
+                android:text="@string/the_kelly_formula"
+                android:textColor="@color/color_text"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:cornerRadius="35dp"
+                app:layout_constraintEnd_toEndOf="@+id/btn_fibbonacci"
+                app:layout_constraintStart_toStartOf="@+id/btn_fibbonacci"
+                app:layout_constraintTop_toBottomOf="@+id/btn_fibbonacci" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/dutching"
+                android:layout_width="350dp"
+                android:layout_height="80dp"
+                android:backgroundTint="@color/color_front"
+                android:text="@string/dutching_in_sports_betting"
+                android:textColor="@color/color_text"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:cornerRadius="35dp"
+                app:layout_constraintEnd_toEndOf="@+id/btn_kelly_formula"
+                app:layout_constraintStart_toStartOf="@+id/btn_kelly_formula"
+                app:layout_constraintTop_toBottomOf="@+id/btn_kelly_formula" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/early"
+                android:layout_width="350dp"
+                android:layout_height="80dp"
+                android:backgroundTint="@color/color_front"
+                android:text="@string/early_cashout_in_sports_betting"
+                android:textColor="@color/color_text"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:cornerRadius="35dp"
+                app:layout_constraintEnd_toEndOf="@+id/dutching"
+                app:layout_constraintStart_toStartOf="@+id/dutching"
+                app:layout_constraintTop_toBottomOf="@+id/dutching" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/bet_live"
+                android:layout_width="350dp"
+                android:layout_height="80dp"
+                android:backgroundTint="@color/color_front"
+                android:text="@string/bet_live_on_over_1_5_goals"
+                android:textColor="@color/color_text"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:cornerRadius="35dp"
+                app:layout_constraintEnd_toEndOf="@+id/early"
+                app:layout_constraintStart_toStartOf="@+id/early"
+                app:layout_constraintTop_toBottomOf="@+id/early" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

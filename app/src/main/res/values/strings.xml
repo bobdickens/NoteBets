@@ -14,7 +14,6 @@
     <string name="add_new_bet">ADD NEW BET</string>
     <string name="enter_name">Enter Name</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="moneylines_details">The moneyline bet is another common type of wager at any sportsbook. There are no spreads and other challenges.\n\nA bettor’s sole objective is to predict which team will win a particular game. There are some differences between the market and how bettors approach it when seeking a payout.\n\nBettors can choose to lay points with a favorite or take points with an underdog. Instead of taking points with the favorite, they can risk more or less money depending on which side they support.\n\nIf they choose to back a favorite, bettors are required to take a higher risk. They can also back the underdog, which is a lower-risk option that could result in a greater payout.</string>
 
     <string name="lorem_ipsum">

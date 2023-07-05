@@ -26,6 +26,12 @@
         <action
             android:id="@+id/action_navigation_dashboard_to_typeFragment"
             app:destination="@id/typeFragment" />
+        <action
+            android:id="@+id/action_navigation_dashboard_to_strategyFragment"
+            app:destination="@id/strategyFragment" />
+        <action
+            android:id="@+id/action_navigation_dashboard_to_FAQFragment"
+            app:destination="@id/FAQFragment" />
     </fragment>
 
     <fragment
@@ -59,10 +65,47 @@
         <action
             android:id="@+id/action_typeFragment_to_navigation_dashboard"
             app:destination="@id/navigation_dashboard" />
+        <action
+            android:id="@+id/action_typeFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
     </fragment>
     <fragment
         android:id="@+id/detailsFragment"
         android:name="com.example.notebets.DetailsFragment"
         android:label="fragment_details"
-        tools:layout="@layout/fragment_details" />
+        tools:layout="@layout/fragment_details" >
+        <action
+            android:id="@+id/action_detailsFragment_to_typeFragment"
+            app:destination="@id/typeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/strategyFragment"
+        android:name="com.example.notebets.StrategyFragment"
+        android:label="fragment_strategy"
+        tools:layout="@layout/fragment_strategy" >
+        <action
+            android:id="@+id/action_strategyFragment_to_navigation_dashboard"
+            app:destination="@id/navigation_dashboard" />
+        <action
+            android:id="@+id/action_strategyFragment_to_details_StrategyFragment"
+            app:destination="@id/details_StrategyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/details_StrategyFragment"
+        android:name="com.example.notebets.Details_StrategyFragment"
+        android:label="fragment_details__strategy"
+        tools:layout="@layout/fragment_details__strategy" >
+        <action
+            android:id="@+id/action_details_StrategyFragment_to_strategyFragment"
+            app:destination="@id/strategyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/FAQFragment"
+        android:name="com.example.notebets.FAQFragment"
+        android:label="fragment_f_a_q"
+        tools:layout="@layout/fragment_f_a_q" >
+        <action
+            android:id="@+id/action_FAQFragment_to_navigation_dashboard"
+            app:destination="@id/navigation_dashboard" />
+    </fragment>
 </navigation>
