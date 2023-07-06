@@ -59,7 +59,7 @@
     </fragment>
     <fragment
         android:id="@+id/typeFragment"
-        android:name="com.example.notebets.ui.dashboard.typesOfBest.TypeFragment"
+        android:name="com.example.notebets.ui.dashboard.infoBets.TypeFragment"
         android:label="fragment_type"
         tools:layout="@layout/fragment_type" >
         <action
@@ -71,7 +71,7 @@
     </fragment>
     <fragment
         android:id="@+id/detailsFragment"
-        android:name="com.example.notebets.DetailsFragment"
+        android:name="com.example.notebets.ui.dashboard.infoBets.DetailsFragment"
         android:label="fragment_details"
         tools:layout="@layout/fragment_details" >
         <action
@@ -80,7 +80,7 @@
     </fragment>
     <fragment
         android:id="@+id/strategyFragment"
-        android:name="com.example.notebets.StrategyFragment"
+        android:name="com.example.notebets.ui.dashboard.infoBets.StrategyFragment"
         android:label="fragment_strategy"
         tools:layout="@layout/fragment_strategy" >
         <action
@@ -92,7 +92,7 @@
     </fragment>
     <fragment
         android:id="@+id/details_StrategyFragment"
-        android:name="com.example.notebets.Details_StrategyFragment"
+        android:name="com.example.notebets.ui.dashboard.infoBets.Details_StrategyFragment"
         android:label="fragment_details__strategy"
         tools:layout="@layout/fragment_details__strategy" >
         <action
@@ -101,7 +101,7 @@
     </fragment>
     <fragment
         android:id="@+id/FAQFragment"
-        android:name="com.example.notebets.FAQFragment"
+        android:name="com.example.notebets.ui.dashboard.infoBets.FAQFragment"
         android:label="fragment_f_a_q"
         tools:layout="@layout/fragment_f_a_q" >
         <action

@@ -1,4 +1,4 @@
-package com.example.notebets
+package com.example.notebets.ui.dashboard.infoBets
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.main.Adapter
+import com.example.notebets.R
 import com.example.notebets.databinding.FragmentFAQBinding
 import com.example.notebets.models.FaqModel
 import com.example.notebets.utilits.APP_ACTIVITY

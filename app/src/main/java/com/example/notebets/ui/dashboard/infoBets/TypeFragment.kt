@@ -1,4 +1,4 @@
-package com.example.notebets.ui.dashboard.typesOfBest
+package com.example.notebets.ui.dashboard.infoBets
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
